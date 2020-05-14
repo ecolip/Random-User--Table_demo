@@ -1,6 +1,6 @@
 $.ajax({
 	url: 'https://randomuser.me/api/',
-	data:{results: 30},
+	data:{results: 100},
 	dataType: 'json',
 	success: function(data) {
   //     console.log(typeof(data));
@@ -15,25 +15,25 @@ $.ajax({
 		var email = user.email;
 		
 		
-		var trDom = $('<tr>');
+		var trTag = $('<tr>');
 		
-		var numDom = $('<th scope="row">');
-		numDom.text(index+1);
+		var numTag = $('<th scope="row">');
+		numTag.text(index+1);
 		
-		var nameDom = $('<td class="name">');
-		nameDom.text(name);
+		var nameTag = $('<td class="name">');
+		nameTag.text(name);
 		
-		var ageDom = $('<td class="age">');
-		ageDom.text(age);
+		var ageTag = $('<td class="age">');
+		ageTag.text(age);
 		
-		var phoneDom = $('<td class="phone">');
-		phoneDom.text(phone);
+		var phoneTag = $('<td class="phone">');
+		phoneTag.text(phone);
 
-		var emailDom = $('<td class="email">');
-		emailDom.text(email);
+		var emailTag = $('<td class="email">');
+		emailTag.text(email);
 		
-		$('tbody').append(trDom);
-		$('tbody tr').eq(index).append(numDom).append(nameDom).append(ageDom).append(phoneDom).append(emailDom);
+		$('tbody').append(trTag);
+		$('tbody tr').eq(index).append(numTag).append(nameTag).append(ageTag).append(phoneTag).append(emailTag);
 	  });
 	  
 	}
